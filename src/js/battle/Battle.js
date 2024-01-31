@@ -776,11 +776,23 @@ function Battle(){
 					actors: faintedPokemonIndexes
 				};
 
-				if(players[0].getRemainingPokemon() > 1){
-					phaseTimeout = setTimeout(self.forceSwitch,	13000);
-				} else{
-					self.forceSwitch();
-				}
+                if (players[0].getAI() !== false) {
+                    var switchChoiceP = players[0].getAI().decideSwitch();
+                    var waitTimeP = 500;
+
+					if((players[0].getAI().hasStrategy("WAIT_CLOCK"))&&(players[0].getSwitchTimer() > 0)&&(players[0].getRemainingPokemon() > 1)){
+						waitTimeP = Math.min(players[0].getSwitchTimer() - 1000, 5000);
+						waitTimeP = Math.floor(Math.random() * waitTimeP) + 2000;
+					}
+
+					setTimeout(function(){
+						self.queueAction(0, "switch", switchChoiceP);
+					}, waitTime);
+			    } else if (players[0].getRemainingPokemon() > 1) {
+			        phaseTimeout = setTimeout(self.forceSwitch,	13000);
+                } else {
+                    self.forceSwitch();
+                };
 
 				// Reset cooldowns for active Pokemon
 
