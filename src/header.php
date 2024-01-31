@@ -274,6 +274,7 @@ if(! isset($OG_IMAGE)){
 						</div>
 					</div>
 				</div>
+				<a class="icon-simulate <?php if(strpos($_SERVER['REQUEST_URI'], '/simulate/')): echo "selected"; endif; ?>" href="<?php echo $WEB_ROOT; ?>simulate/">Simulator</a>
 				<div class="parent-menu more-parent-menu">
 					<a class="more desktop" href="#">
 						<div class="hamburger desktop">

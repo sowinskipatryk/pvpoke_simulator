@@ -44,6 +44,15 @@
 		</span>
 	</a>
 
+	<a href="<?php echo $WEB_ROOT; ?>simulate/" class="button">
+		<span class="btn-content-wrap">
+			<span class="btn-icon btn-icon-simulate"></span>
+			<span class="btn-label">
+				<h2>Simulate</h2>
+				<p>Watch real-time battle simulation between two AI players.</p>
+			</span>
+		</span>
+	</a>
 
 	<a href="<?php echo $WEB_ROOT; ?>contribute/" class="button">
 		<span class="btn-content-wrap">
