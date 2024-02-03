@@ -1,4 +1,8 @@
-# PvPoke
+# PvPoke Simulator
+
+In addition to the existing pvpoke features, this fork also has a tab with an AI battle simulator (CPU vs CPU) at various difficulty levels. In addition to its use for fun, this allows players to track the ideal execution of a given battle, as players have a full range of strategies to use. The tab was created based on the training tab with some modifications. As part of the simulator, the interface has been slightly changed, added information for the second player, damage statistics, HP, IV, etc.
+
+Below the original README.md file
 
 [PvPoke.com](https://pvpoke.com) is a resource for Pokemon GO PvP that includes a battle simulator, rankings, and team building. The project’s goal is to provide tools and insights to help players build their teams, and foster the game’s community spirit by making all of the underlying code public. I hope this project can inspire new tools or benefit the existing ones that continue to enhance our enjoyment of the game.
 
