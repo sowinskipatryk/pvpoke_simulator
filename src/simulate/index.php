@@ -1,6 +1,6 @@
 <?php
 
-$META_TITLE = 'Training Battle';
+$META_TITLE = 'AI Battle Simulation';
 
 $META_DESCRIPTION = 'Watch two AI players battle against each other.';
 

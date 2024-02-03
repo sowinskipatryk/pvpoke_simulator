@@ -302,6 +302,9 @@ footer a.domz-link {
 .home a.button .btn-icon.btn-icon-train {
   background-image: url("../img/themes/sunflower/nav-train-white.png");
 }
+.home a.button .btn-icon.btn-icon-simulate {
+  background-image: url("../img/themes/sunflower/rating-tie.png");
+}
 .home a.button .btn-icon.btn-icon-heart {
   background-image: url("../img/themes/sunflower/nav-heart-white.png");
 }
@@ -360,6 +363,10 @@ footer a.domz-link {
 
 .icon-team {
   background-image: url("../img/themes/sunflower/nav-team-blue.png");
+}
+
+.icon-simulate {
+  background-image: url("../img/themes/sunflower/rating-tie-blue.png");
 }
 
 .icon-heart {
@@ -1114,6 +1121,7 @@ footer a.domz-link {
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: default;
 }
 .move-bars .move-bar .bar {
   -webkit-transition: height 0.2s ease-out 0s;
