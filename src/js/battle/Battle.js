@@ -769,14 +769,19 @@ function Battle(){
 			}
 
 			// Are all Pokemon fainted or should the battle continue?
-
 			if((players[0].getRemainingPokemon() > 0)&&(players[1].getRemainingPokemon() > 0)){
 				phase = "suspend_switch";
 				phaseProps = {
 					actors: faintedPokemonIndexes
 				};
 
-                if (players[0].getAI() !== false) {
+                if (players[0].getAI() === false) {
+                    if(players[0].getRemainingPokemon() > 1){
+					    phaseTimeout = setTimeout(self.forceSwitch,	13000);
+				    } else{
+					    self.forceSwitch();
+				    }
+                } else {
                     var switchChoiceP = players[0].getAI().decideSwitch();
                     var waitTimeP = 500;
 
@@ -787,11 +792,7 @@ function Battle(){
 
 					setTimeout(function(){
 						self.queueAction(0, "switch", switchChoiceP);
-					}, waitTime);
-			    } else if (players[0].getRemainingPokemon() > 1) {
-			        phaseTimeout = setTimeout(self.forceSwitch,	13000);
-                } else {
-                    self.forceSwitch();
+					}, waitTimeP);
                 };
 
 				// Reset cooldowns for active Pokemon
